@@ -1,0 +1,14 @@
+.buyerform{
+    padding: 50px;
+}
+.card-header{
+    background-color: #1b262c;
+    padding: 40px;
+    font-size: 30px;
+}
+.savebutton{
+    width: 200px;
+    height: 60px;
+    font-size: 25px;
+    border-radius: 25px;
+}

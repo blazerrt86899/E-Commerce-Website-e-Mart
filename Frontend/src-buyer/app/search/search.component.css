@@ -1,0 +1,17 @@
+.btnClick:hover{
+color: white;
+}
+
+input[type=text]{
+    width: 20%;
+}
+
+input[type=text]:hover{
+    width: 60%;
+    transition: width 0.6s ease-in-out;
+}
+
+.dropgroup{
+    margin-left: 150px;
+}
+

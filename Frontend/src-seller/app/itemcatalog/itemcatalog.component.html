@@ -1,0 +1,53 @@
+<div class="container-fluid itemcatalog">
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="text-center text-white">Items List</h1>
+    </div>
+  </div>
+</div>
+
+<div class="container padding">
+    <div class="row padding">
+      <div class="col-md-4" *ngFor="let item of items">
+        <div class="card">
+          <img [src]="item.image" alt="image" class="card-img-top">
+           <h5 class="card-header">Item Detail</h5>
+           <div class="card-body">
+             <div class="container-fluid">
+             <div class="row">
+               <div class="col-md-12">
+                 <h5 class="card-title">Name: {{item.itemName}}</h5>
+                 <p><strong>Category Name:</strong> {{item.categoryName}}</p>
+               </div>
+             </div>
+           </div>
+           <div class="container-fluid">
+             <div class="row">  
+               <div class="col-md-6">
+                 <p class="lead">Rs. {{item.price}}</p>
+               </div>
+             </div>
+             <div class="row">
+               <div class="col-md-6">
+                  <p class="lead">Stock: {{item.stock}}</p>
+               </div>
+             </div>
+           </div>
+           <div class="container-fluid">
+             <div class="row">
+                 <div class="col-md-6">
+                   <a  class="btn btn-success updateitem" type="button" routerLink="/update" (click)="update(item.itemId)">UPDATE</a>
+                 </div>
+                 <div class="col-md-6">
+                   <button class="btn btn-warning viewitem" type="button" (click) = "deleteProduct(item.itemId)">DELETE</button>
+                 </div>
+             </div>
+           </div>
+           </div>
+         </div>
+         <hr/>
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,102 @@
+<div id="all">
+    <div id="content">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <!-- breadcrumb-->
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li aria-current="page" class="breadcrumb-item active">Shopping cart</li>
+              </ol>
+            </nav>
+          </div>
+          <div id="basket" class="col-lg-9">
+            <div class="box">
+              <form>
+                <h1>Shopping cart</h1>
+                <p class="text-muted">You currently have 3 item(s) in your cart.</p>
+                <div class="table-responsive">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th colspan="2">Product ID</th>
+                        <th>Quantity</th>
+                        <th>Unit price</th>
+                        <th>Discount</th>
+                        <th colspan="2">Total</th>
+                      </tr>
+                    </thead>
+                    <tbody > 
+                      <!-- *ngIf="view?.length > 0; else empty" -->
+                      <tr *ngFor="let views of view">
+                        <td><a href="#"><img src=""></a></td>
+                        <td>{{views.itemId}}</td>
+                        <td>
+                        <button type="button" class="btn btn-primary" (click)="increment(views)">+</button>  
+                          <span class="quantity">{{views.itemQuantity}}</span>
+                          <button type="button" class="btn btn-primary" (click)="decrement(views)">-</button>
+                        </td>
+                        <td>Rs {{views.unitPrice}}</td>
+                        <td>Rs 0.00</td>
+                        <td>Rs {{views.unitPrice*views.itemQuantity}}</td>
+                        <td><button class="btn btn-danger" type="button" (click)="deleteCart(views)">Delete</button></td>
+                      </tr>
+                    </tbody>
+                    <!-- <tbody #empty>
+                      <tr>
+                        <td>
+                          <h4>Cart is empty. Add Item and come again...</h4>
+                        </td>
+                      </tr>
+                    </tbody> -->
+                    <tfoot>
+                      <tr>
+                        <th colspan="5">Total</th>
+                        <th colspan="2">Rs {{totalAmount}}</th>
+                      </tr>
+                    </tfoot>
+                  </table>
+                </div>
+                <!-- /.table-responsive-->
+                <div class="box-footer d-flex justify-content-between flex-column flex-lg-row">
+                  <div class="left"><a routerLink="/home" class="btn btn-outline-secondary">
+                      <i class="fa fa-chevron-left"></i> Continue shopping</a>
+                  </div>
+                    <div class="right">
+                        <button type="submit" class="btn btn-primary" (click)="checkoutCart()">Proceed to Checkout <i class="fa fa-chevron-right"></i></button>
+                    </div>
+                  </div>
+                </form>
+            </div>
+            </div>
+
+            <div class="col-lg-3 order-summary">
+                <div id="order-summary" class="box">
+                  <div class="box-header">
+                    <h3 class="mb-0">Order summary</h3>
+                  </div>
+                  <p class="text-muted">Shipping and additional costs are calculated based on the values you have entered.</p>
+                  <div class="table-responsive">
+                    <table class="table">
+                      <tbody>
+                        <tr>
+                          <td>Order subtotal</td>
+                          <th>Rs {{totalAmount}}</th>
+                        </tr>
+                        <tr class="total">
+                          <td>Total</td>
+                          <th>Rs {{totalAmount}}</th>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                
+              </div>
+              <!-- /.col-md-3-->
+            </div>
+        </div>
+      </div>
+    </div>
+      

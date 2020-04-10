@@ -1,0 +1,28 @@
+<div class="container-fluid seller">
+    <div class="row ">
+        <div class="col-md-6 text-center">
+            <img class="img-avatar" src="assets/avatar.jpg" alt="">
+        </div>
+        <div class="col-md-6 text-white">
+            <h1>Seller Information</h1>
+            <hr>
+            <p>Seller Name: {{mySeller.username}}</p>
+            <p>Company name: {{mySeller.companyName}}</p>
+            <p>Brief About Company: {{mySeller.briefAboutCompany}}</p>
+            <p>Website: {{mySeller.website}}</p>
+            <p>Email Id: {{mySeller.emailId}}</p>
+            <p>GSTIN: {{mySeller.gSTIN}}</p>
+            <p>Contact Number: {{mySeller.contactNumber}}</p>
+        </div>
+    </div>
+</div>
+<div class="container-fluid dash">
+    <div class="row text-center">
+        <div class="col-md-6">
+            <a routerLink="/itemlist" class="btn btn-outline-danger additem">ADD ITEM</a>
+        </div>
+        <div class="col-md-6">
+            <a routerLink="/catalog" class="btn btn-outline-success viewitem">VIEW ITEM</a>
+        </div>
+    </div>
+</div>

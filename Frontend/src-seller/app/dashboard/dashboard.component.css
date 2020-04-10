@@ -1,0 +1,29 @@
+img{
+    width: 50%;
+    border-radius: 50%;
+}
+.seller{
+    margin-bottom: 50px;
+    background-color: #1b262c;
+    padding:20px;
+}
+.img-avatar{
+    margin-top: 20px;
+}
+.dash{
+    padding:50px;
+}
+.additem{
+    height: 150px;
+    width: 400px;
+    text-align: center; 
+    font-size: 40px;
+    border-radius: 20px;
+}
+.viewitem{
+    height: 150px;
+    width: 400px;
+    text-align: center;
+    font-size: 40px;
+    border-radius: 20px;
+}

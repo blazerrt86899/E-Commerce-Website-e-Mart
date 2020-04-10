@@ -1,0 +1,73 @@
+<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+    <div class="container-fluid">
+        <a href="" class="navbar-brand title"><img src="" alt="">eMart.in</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">Contact Us</a>
+                </li>
+                <li class="nav-item" *ngIf="isLoggedIn == true">
+                    <a class="nav-link" routerLink="/dashboard" href="">Dashboard</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item" *ngIf="isLoggedIn != true">
+                    <a routerLink="/login" class="btn btn-warning loginbtn">Start Selling</a>
+                </li>
+                <li class="nav-item" *ngIf="isLoggedIn == true">
+                    <span>Welcome, {{sellerNewName}}</span>
+                </li>
+                <li class="nav-item" *ngIf="isLoggedIn == true">
+                    <a routerLink="/logout" class="btn btn-warning loginbtn">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</nav>
+
+<router-outlet></router-outlet>
+
+<footer>
+    <div class="container-fluid padding">
+        <div class="row padding text-center">
+            <div class="col-md-4">
+                <span class="website">eMart.in</span>
+                <hr class="light">
+                <p>55-5-55555</p>
+                <p>email@email.com</p>
+                <p>City, State, Zipcode</p>
+            </div>
+            <div class="col-md-4">
+                <hr class="light">
+                <h3>Working Hours</h3>
+                <hr class="light">
+                <p>Saturday, 9am - 6pm</p>
+                <p>Sunday, 9am - 6pm</p>
+                <p>All Other Days, Closed.</p>
+            </div>
+            <div class="col-md-4">
+                <hr class="light">
+                <h3>Service Area</h3>
+                <hr class="light">
+                <p>Chennai, Tamil Nadu, 600096</p>
+                <p>New Delhi, Delhi, 110010</p>
+                <p>Bangalore, Karnataka, 560096</p>
+            </div>
+            <div class="col-12">
+                <hr class="light-100">
+                <h5>Copyright&copy;&nbsp;2020 : www.github.com/blazerrt86899</h5>
+                <h5>Designed By : Romu Tiwari</h5>
+            </div>
+        </div>
+    </div>
+</footer>

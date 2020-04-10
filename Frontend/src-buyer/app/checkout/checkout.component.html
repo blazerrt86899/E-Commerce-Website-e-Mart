@@ -1,0 +1,53 @@
+<h1 class="display-3 text-center">Your Order is Successfully placed</h1>
+<p class="text-uppercase">Here are your transaction and order details............</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-striped">
+                <tr>
+                <th>Transaction ID</th>
+                <th>Total Amount</th>
+                <th>Transaction Type</th>
+                <th>Transaction Remarks</th>
+            </tr>
+                <tr *ngFor="let transaction of transactions">
+                    <td>{{transaction.transactionId}}</td>
+                    <td>{{transaction.totalAmount}}</td>
+                    <td>{{transaction.transactionType}}</td>
+                    <td>{{transaction.transactionRemarks}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table">
+                <tr>
+                <th>Purchase ID</th>
+                <th>Item ID</th>
+                <th>Purchase Remarks</th>
+                <th>Quantity Purchased</th>
+                </tr>   
+                <tr *ngFor="let purchase of purchases">
+                    <td>{{purchase.purchaseId}}</td>
+                    <td>{{purchase.itemId}}</td>
+                    <td>{{purchase.purchaseRemarks}}</td>
+                    <td>{{purchase.numberOfItems}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h3>Happy Shopping !!!!!!!!!</h3>
+            <br>
+            <br>
+            <br>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <a routerLink="/home" class="btn btn-outline-primary checkout-btn ">Continue Shopping</a>
+        </div>
+    </div>
+</div>
